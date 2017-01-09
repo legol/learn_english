@@ -1,2 +1,4 @@
 In browser:
 http://192.168.91.129:10001/index.php/hh/view/bbbbb
+
+http://192.168.91.129:10001/index.php?c=hh&m=view&page=bbbbb

@@ -4,6 +4,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 require_once __DIR__ . '/custom_xhp_elements/custom_xhp_elements_example.php';
 require_once __DIR__ . '/custom_xhp_elements/window.php';
+require_once __DIR__ . '/custom_xhp_elements/layout.php';
 
 
 

@@ -8,8 +8,7 @@ class Hh extends CI_Controller {
 			$this->load->database();
 		}
 
-        public async function view($page = 'default_value'): Awaitable<void>
-        {
+		public async function view($page = 'default_value'): Awaitable<void> {
 // to return json:
 //			$this->output->set_content_type('application/json');
 //			$theHTMLResponse = <window>inside window, request_uri: {$_SERVER['REQUEST_URI']}</window>;
@@ -26,32 +25,34 @@ class Hh extends CI_Controller {
 			$data['title'] = 'learn english with cxf';
 			$data['menu'] = 'menu';
 			$data['left'] = 'left';
-			$data['content'] = 'content:haha';
+			$data['content'] = 'content';
 			$data['right'] = 'right';
 			$data['input'] = 'input';
 
 			$content = await $this->genContent();
 			$data['content'] = $content;
 
-            $this->load->view('main', $data->toArray());
-        }
-
-		private function genPage(): :xhp{
-			return <div>from Hh::genPage()</div>;
-		}
+			$this->load->view('main', $data->toArray());
+    }
 
 		private async  function genContent(): Awaitable<:xhp> {
+			$content = 
+				<layout>
+					<layout:column column_type="fill">
+						{'sentences I\'ve learned'}
+					</layout:column>
+				</layout>;
+
 			$sql = "SELECT sentence FROM sentences";
 			$query = $this->db->query($sql, array());
 
-
-			$result = '';
-			foreach ($query->result_array() as $row)
-			{
-        		$result .= $row['sentence'].' ';
+			foreach ($query->result_array() as $row) {
+				$row =
+					<layout:column column_type="fill">
+						{$row['sentence']}
+					</layout:column>;
+				$content->appendChild($row);
 			}	
-
-
-			return <div>from Hh::genContent() {$result}</div>;
+			return $content;
 		}
 }

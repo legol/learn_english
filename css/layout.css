@@ -1,0 +1,11 @@
+.layout_flex {
+	display: flex
+}
+
+.layout_flex .normal_column {
+	float: none;
+}
+
+.layout_flex .fill_column {
+	flex: 1 0 0px;
+}

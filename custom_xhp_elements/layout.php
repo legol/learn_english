@@ -12,7 +12,7 @@ class :layout extends :x:element {
 
   protected async function asyncRender(): Awaitable<\XHPRoot> {
   	return 
-      <div>
+      <div >
 		{$this->getChildren()}
 	  </div>;
   }

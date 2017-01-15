@@ -29,8 +29,13 @@ class Hh extends CI_Controller {
 			$data['right'] = 'right';
 			$data['input'] = 'input';
 
-			$content = await $this->genContent();
+			list ($content, $input) = await \HH\Asio\v(array(
+				$this->genContent(),
+				$this->genInput(),
+			));
+
 			$data['content'] = $content;
+			$data['input'] = $input;
 
 			$this->load->view('main', $data->toArray());
     }
@@ -54,5 +59,22 @@ class Hh extends CI_Controller {
 				$content->appendChild($row);
 			}	
 			return $content;
+		}
+
+		private async  function genInput(): Awaitable<:xhp> {
+			$content =
+				<div>
+					<script src={base_url() . 'js/app/handle_input.js'}></script>
+					<input type="text" maxlength={500} id="new_sentence" placeholder="input new sentence"/>
+					<button type="button" onclick="onClick_saveSentences()">{'save sentence'}</button>
+				</div>;
+
+			return $content;
+		}
+
+
+		public async function saveSentence(): Awaitable<void> {
+		
+
 		}
 }

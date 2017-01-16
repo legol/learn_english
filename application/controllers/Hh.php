@@ -75,6 +75,6 @@ class Hh extends CI_Controller {
 
 		public async function saveSentence(): Awaitable<void> {
 		
-
+			// the post data is at $_POST, or $this->input->post(), or $this->input->raw_input_stream
 		}
 }

@@ -76,5 +76,32 @@ class Hh extends CI_Controller {
 		public async function saveSentence(): Awaitable<void> {
 		
 			// the post data is at $_POST, or $this->input->post(), or $this->input->raw_input_stream
+			$post = $this->input->post();
+			if ($post === null) {
+				$this->output->set_content_type('application/json');
+	      $theHTMLResponse = <window>inside window, request_uri: {$_SERVER['REQUEST_URI']}</window>;
+	      $this->output->set_output(json_encode(array('affacted_rows'=> 0))); 
+				return;
+			}
+
+			$input_sentence = idx($post, 'input');
+			if ($input_sentence === '') {
+				$this->output->set_content_type('application/json');
+	      $theHTMLResponse = <window>inside window, request_uri: {$_SERVER['REQUEST_URI']}</window>;
+	      $this->output->set_output(json_encode(array('affacted_rows'=> 0))); 
+				return;
+			}
+
+			$sql = "INSERT INTO sentences (sentence) VALUES (".$this->db->escape($input_sentence).")";
+			$this->db->query($sql);
+			$affacted_rows = $this->db->affected_rows();
+		
+			$this->output->set_content_type('application/json');
+      $theHTMLResponse = <window>inside window, request_uri: {$_SERVER['REQUEST_URI']}</window>;
+      $this->output->set_output(json_encode(array('affacted_rows'=> $affacted_rows))); 
+// to return json:
+//      $this->output->set_content_type('application/json');
+//      $theHTMLResponse = <window>inside window, request_uri: {$_SERVER['REQUEST_URI']}</window>;
+//      $this->output->set_output(json_encode(array('ShoppingCartHtml'=> $theHTMLResponse))); 
 		}
 }

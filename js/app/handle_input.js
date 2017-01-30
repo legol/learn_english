@@ -5,5 +5,5 @@ function onClick_saveSentences() {
 	var utilities = new Utilities();
 	utilities.init();
 
-	utilities.commit('http://192.168.91.129:10001/index.php?c=hh&m=saveSentence', {input: $("#new_sentence").val()}, null, null);
+	utilities.commit('http://192.168.1.253:10001/index.php?c=hh&m=saveSentence', {input: $("#new_sentence").val()}, null, null);
 }

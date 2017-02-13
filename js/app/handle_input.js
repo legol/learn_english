@@ -7,5 +7,9 @@ function onClick_saveSentences() {
 
 	console.log(window.location.origin);
 
-	utilities.commit(window.location.origin + '/index.php?c=hh&m=saveSentence', {input: $("#new_sentence").val()}, null, null);
+	utilities.commit(window.location.origin + '/index.php?c=hh&m=saveSentence', {input: $("#new_sentence").val()}, onSentenceSaved, null);
+}
+
+function onSentenceSaved(response) {
+	alert('hello');
 }

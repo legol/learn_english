@@ -16,9 +16,12 @@
 	<script src="<?php echo base_url(); ?>js/library/log4javascript-1.4.13/log4javascript_uncompressed.js"></script>
 
 	<script src="<?php echo base_url(); ?>js/utilities.js"></script>
-	
+  <script src="<?php echo base_url(); ?>js/render.js"></script>
+
+  <div id='test_container'></div>
+
 	<div id='main_container' class='main-container'>
-    	<div class="menu_container" id="menu-container">
+    <div class="menu_container" id="menu-container">
 			<?php echo $menu;?>
 		</div>
 		<div id='left_container' class='left-container'>
@@ -35,4 +38,9 @@
 		</div>
 	</div>
 </body>
+
+<script src="<?php echo base_url(); ?>js/test_controller.js"></script>
+<script>
+  window.testController.main.init('abcde');
+</script>
 </html>

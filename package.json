@@ -1,0 +1,19 @@
+{
+  "name": "learn_english",
+  "version": "1.0.0",
+  "description": "In browser: http://192.168.91.129:10001/index.php/hh/view/bbbbb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/legol/learn_english.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/legol/learn_english/issues"
+  },
+  "homepage": "https://github.com/legol/learn_english#readme"
+}

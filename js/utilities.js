@@ -26,10 +26,15 @@ if (!Utilities) {
 				data : _data,
 			  success: function(data, textStatus, jqXHR)
 			  {
+					if (_onSuccess) {
+						_onSuccess(data);
+					}
 			  },
 			  error: function (jqXHR, textStatus, errorThrown)
 			  {
-			
+					if (_onError) {
+						_onError(errorThrow);
+					}
 			  }
 			});
     },

@@ -8,6 +8,13 @@
 </head>
 <body>
 
+  <!-- React begin -->
+  <script src="https://unpkg.com/react@15/dist/react.js"></script>
+  <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.18.1/babel.min.js"></script>
+  <!-- React end -->
+
+
 	<script src="<?php echo base_url(); ?>js/library/jquery-3.1.0.js"></script>
 	<script src="<?php echo base_url(); ?>js/library/jquery-migrate-3.0.0.js"></script>
 	<script src="<?php echo base_url(); ?>js/library/jquery.mousewheel.js"></script>
@@ -19,7 +26,7 @@
   <script src="<?php echo base_url(); ?>js/render.js"></script>
 
   <div id='test_container'></div>
-
+  <div id='react-root'></div>
 	<div id='main_container' class='main-container'>
     <div class="menu_container" id="menu-container">
 			<?php echo $menu;?>
@@ -43,4 +50,8 @@
 <script>
   window.testController.main.init('abcde');
 </script>
+
+<script type="text/babel" src="<?php echo base_url(); ?>jsx/App.js"></script>
+<script type="text/babel" src="<?php echo base_url(); ?>jsx/index.js"></script>
+
 </html>

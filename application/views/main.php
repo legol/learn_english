@@ -20,7 +20,6 @@
 	<script src="<?php echo base_url(); ?>js/library/jquery.mousewheel.js"></script>
 	<script src="<?php echo base_url(); ?>js/library/jquery-ui-1.11.4/jquery-ui.js"></script>
 	<script src="<?php echo base_url(); ?>js/library/jTemplates_0_8_4/jTemplates/jquery-jtemplates_uncompressed.js"></script>
-	<script src="<?php echo base_url(); ?>js/library/log4javascript-1.4.13/log4javascript_uncompressed.js"></script>
 
 	<script src="<?php echo base_url(); ?>js/utilities.js"></script>
   <script src="<?php echo base_url(); ?>js/render.js"></script>
@@ -51,7 +50,11 @@
   window.testController.main.init('abcde');
 </script>
 
-<script type="text/babel" src="<?php echo base_url(); ?>jsx/App.js"></script>
-<script type="text/babel" src="<?php echo base_url(); ?>jsx/index.js"></script>
+<script type="text/babel" src="<?php echo base_url(); ?>react/Sentences.js"></script>
+
+<script type="text/babel" src="<?php echo base_url(); ?>js/app_controller.js"></script>
+<script type="text/babel" src="<?php echo base_url(); ?>react/App.js"></script>
+
+<script type="text/babel" src="<?php echo base_url(); ?>react/index.js"></script>
 
 </html>

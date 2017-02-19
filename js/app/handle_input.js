@@ -1,4 +1,3 @@
-
 function onClick_saveSentences() {
 	alert($("#new_sentence").val());
 
@@ -7,7 +6,7 @@ function onClick_saveSentences() {
 
 	console.log(window.location.origin);
 
-	utilities.commit(window.location.origin + '/index.php?c=hh&m=saveSentence', {input: $("#new_sentence").val()}, onSentenceSaved, null);
+	utilities.commit(window.location.origin + '/index.php?c=sentences&m=saveSentence', {input: $("#new_sentence").val()}, onSentenceSaved, null);
 }
 
 function onSentenceSaved(response) {

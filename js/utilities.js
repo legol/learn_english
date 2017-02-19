@@ -3,21 +3,17 @@ if (!Utilities) {
     this.data = new Object();
 
     this.data.position = new Object();
-
-    var log = log4javascript.getDefaultLogger();
-    log.info("Utilities loaded...");
+    console.log("Utilities loaded...");
   };
 
   Utilities.prototype = {
     init: function () {
-      var log = log4javascript.getDefaultLogger();
-      log.info("Utilities initialized.");
+      console.log("Utilities initialized.");
     },
 
     commit: function(_url, _data, _onSuccess, _onError){
-      var log = log4javascript.getDefaultLogger();
-      log.info("Utilities commit called.");
-			
+      console.log("Utilities commit called.");
+
 			$.ajax({
 			  url : _url,
 			  type: "POST",

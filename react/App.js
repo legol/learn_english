@@ -39,7 +39,21 @@ class App extends React.Component {
     return (
       <div>
         React Loaded!!!
-        {this.state.content}
+
+        <div id="menu-container" className="menu_container" >
+        </div>
+        <div id='left_container' className='left-container'>
+        </div>
+        <div id='content_container' className='content-container'>
+          {this.state.content}
+        </div>
+        <div id='right_container' className='right-container'>
+        </div>
+        <div id='input_container' className='input-container'>
+					<input type="text" maxLength={500} id="new_sentence" placeholder="input new sentence"/>
+					<input type="button" onClick={() => onClick_saveSentences()} value="Save Sentence!"/>
+        </div>
+
       </div>
     );
   }

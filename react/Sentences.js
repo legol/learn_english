@@ -5,7 +5,7 @@ class Sentences extends React.Component {
     let arrayLength = this.props.data_source.length;
 
     for (var i = 0; i < arrayLength; i++) {
-      children.push((<div>{this.props.data_source[i]}</div>));
+      children.push((<div key={i}>{this.props.data_source[i]}</div>));
     }
 
     return (

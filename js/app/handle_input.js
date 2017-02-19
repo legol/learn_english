@@ -6,9 +6,20 @@ function onClick_saveSentences() {
 
 	console.log(window.location.origin);
 
-	utilities.commit(window.location.origin + '/index.php?c=sentences&m=saveSentence', {input: $("#new_sentence").val()}, onSentenceSaved, null);
+	utilities.commit(
+		window.location.origin + '/index.php?c=sentences&m=saveSentence',
+		{input: $("#new_sentence").val()},
+		onSentenceSaved,
+		onSaveSentenceError
+	);
 }
 
 function onSentenceSaved(response) {
 	alert('hello');
+
+	window.appController.loadData();
+}
+
+function onSaveSentenceError(response) {
+	alert('error');
 }

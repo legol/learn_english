@@ -23,6 +23,8 @@ abstract final class TypeStructureImpl {
     }
 
     switch ($ts['kind']) {
+	  default:
+	    return;
       case TypeStructureKind::OF_VOID:
         throw new UnsupportedTypeException('OF_VOID');
       case TypeStructureKind::OF_INT:

@@ -78,9 +78,9 @@ abstract class TypeAssert {
     classname<T> $type,
     mixed $what,
   ): T {
-    if ($what instanceof $type) {
-      return $what;
-    }
+    // if ($what instanceof $type) {
+    //   return $what;
+    // }
     throw IncorrectTypeException::withValue($type, $what);
   }
 

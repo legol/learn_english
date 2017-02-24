@@ -1,23 +1,8 @@
 {
-	"description": "The CodeIgniter framework",
-	"name": "codeigniter/framework",
+	"description": "learn english",
+	"name": "learn_english",
 	"type": "project",
-	"homepage": "https://codeigniter.com",
-	"license": "MIT",
-	"support": {
-		"forum": "http://forum.codeigniter.com/",
-		"wiki": "https://github.com/bcit-ci/CodeIgniter/wiki",
-		"irc": "irc://irc.freenode.net/codeigniter",
-		"source": "https://github.com/bcit-ci/CodeIgniter"
-	},
 	"require": {
-		"php": ">=5.2.4",
-	   	"facebook/xhp-lib": "2.x"
-	},
-	"suggest": {
-		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
-	},
-	"require-dev": {
-		"mikey179/vfsStream": "1.1.*"
+	  "facebook/xhp-lib": "~2.2"
 	}
 }

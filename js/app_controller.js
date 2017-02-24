@@ -18,7 +18,7 @@ if (!AppController) {
     loadData: function() {
       // trigger async network operation
       $.ajax({
-        url: 'http://192.168.1.253:10001/index.php?c=sentences&m=getSentences',
+        url: 'http://192.168.1.240:10001/index.php?c=sentences&m=getSentences',
         dataType: 'json',
         async: true,
         type: 'POST',

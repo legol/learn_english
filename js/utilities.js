@@ -11,7 +11,7 @@ if (!Utilities) {
       console.log("Utilities initialized.");
     },
 
-    commit: function(_url, _data, _onSuccess, _onError){
+    post: function(_url, _data, _onSuccess, _onError){
       console.log("Utilities commit called.");
 
 			$.ajax({

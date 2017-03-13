@@ -6,7 +6,7 @@ function onClick_saveSentences() {
 
 	console.log(window.location.origin);
 
-	utilities.commit(
+	utilities.post(
 		window.location.origin + '/index.php?c=sentences&m=saveSentence',
 		{input: $("#new_sentence").val()},
 		onSentenceSaved,

@@ -8,17 +8,8 @@ class Sentences extends CI_Controller {
 		}
 
 		public async function getSentences(): Awaitable<void> {
-// to return json:
-//			$this->output->set_content_type('application/json');
-//			$theHTMLResponse = <window>inside window, request_uri: {$_SERVER['REQUEST_URI']}</window>;
-//			$this->output->set_output(json_encode(array('ShoppingCartHtml'=> $theHTMLResponse)));
+			// http://192.168.1.130:10001/index.php?c=Sentences&m=getSentences
 
-// to return html directly:
-//			echo <window>inside window, request_uri: {$_SERVER['REQUEST_URI']}</window>;
-//			echo <p>Hello, world! XHP rocks!</p>;
-//			echo <div>aaaaaaa parameter:{$page}</div>;
-//			echo $this->genPage();
-//			echo <introduction />;
 			$sql = "SELECT sentence FROM sentences";
 			$query = $this->db->query($sql, array());
 
@@ -27,6 +18,7 @@ class Sentences extends CI_Controller {
 				$content[] = $row['sentence'];
 			}
 
+			header('Access-Control-Allow-Origin: *'); // allow cross site call
 			$this->output->set_content_type('application/json');
 			$this->output->set_output(json_encode(Map {
 				'error_code' => 0,
